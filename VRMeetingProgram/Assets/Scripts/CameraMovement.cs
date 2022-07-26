@@ -41,7 +41,7 @@ public class CameraMovement : MonoBehaviour
         rotX += -(Input.GetAxis("Mouse Y")) * sensitivity * Time.deltaTime; // 마우스 상하
         rotY += Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime; // 마우스 좌우
 
-        rotX = Mathf.Clamp(rotX, -clampAngle, clampAngle); // 좌우 범위
+        rotX = Mathf.Clamp(rotX, -clampAngle, clampAngle); // 상하 범위
         Quaternion rot = Quaternion.Euler(rotX, rotY, 0); // z축 0
         transform.rotation = rot;
     }
